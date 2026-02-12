@@ -61,4 +61,3 @@ router.put("/update-admin-user/:id",
 router.delete("/delete-admin-user/:id",[check("id", "Invalid user ID").isMongoId(),], authMiddleware, roleMiddleware(['super-admin']), deleteAdminUser);
 
 export default router;
-
